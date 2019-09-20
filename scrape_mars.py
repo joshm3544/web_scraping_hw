@@ -181,7 +181,7 @@ def scrape_info():
         row = [x.text for x in td]
         points.append(row)
         
-        fact_df = pd.DataFrame(l, columns=header)
+        fact_df = pd.DataFrame(points, columns=header)
         fact_df 
 
 
@@ -225,13 +225,13 @@ def scrape_info():
             bs4 = bs(urls.text, 'html.parser')    
             row = {'title': bs4.title.text.split(' Enhanced')[0],
           'img_url': bs4.find('div', class_='downloads').a['href']}
-            hemisphere_image_urls.append(row)
+            pictures.append(row)
 
 
             # In[80]:
 
 
-            hemisphere_image_urls   
+            pictures   
 
 
             # In[81]:
